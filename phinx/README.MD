@@ -9,6 +9,7 @@ Within the container tyoe:
 
 ```
 sphinx-build -b html source build
+exit
 ```
 
 Afterwars type the following on MAC-OS
