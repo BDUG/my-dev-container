@@ -1,0 +1,23 @@
+{
+    "name": "Rust Dev Container",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "rust-lang.rust-analyzer"
+        ]
+      }
+    },
+    "postCreateCommand": "cargo build",
+    "remoteUser": "vscode",
+    "containerEnv": {
+      "PYTHONPATH": "/workspace"
+    },
+    "workspaceFolder": "/workspace",
+    "mounts": [
+    "source=${localWorkspaceFolder}/workspace,target=/workspace,type=bind,consistency=cached"
+    ]
+  }
+  
