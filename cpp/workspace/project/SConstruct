@@ -1,0 +1,4 @@
+env = Environment(CXXFLAGS='-std=c++17')
+env.Program(target='my_project',
+            source=['src/main.cpp', 'src/greeter.cpp'],
+            CPPPATH=['include'])

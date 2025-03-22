@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.tpp": "cpp"
+  },
+  "C_Cpp.default.configurationProvider": "ms-vscode.cpptools",
+    "cmake.sourceDirectory": "/workspace/project"
+}

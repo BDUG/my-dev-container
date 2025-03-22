@@ -1,0 +1,32 @@
+{
+    "name": "C/C++ Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/cpp:debian",
+    "features": {
+      "ghcr.io/devcontainers/features/docker-in-docker:1": {},
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": true,
+        "installOhMyZsh": true
+      }
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-vscode.cpptools",
+          "llvm-vs-code-extensions.vscode-clangd",
+          "twxs.cmake",
+          "ms-python.python",
+          "ms-azuretools.vscode-docker",
+          "eamodio.toggle-excluded-files"
+        ]
+      }
+    },
+    "postCreateCommand": "bash ./install-tools.sh",
+    "containerEnv": {
+      "PYTHONPATH": "/workspace"
+    },
+    "workspaceFolder": "/workspace",
+    "mounts": [
+    "source=${localWorkspaceFolder}/workspace,target=/workspace,type=bind,consistency=cached"
+    ]
+  }
+  
