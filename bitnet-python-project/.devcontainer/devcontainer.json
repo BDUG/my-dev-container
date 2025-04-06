@@ -1,0 +1,13 @@
+{
+  "name": "Larq BitNet",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python"
+  ],
+  "postCreateCommand": "pip install --upgrade pip && pip install tensorflow larq matplotlib qkeras tf_keras qonnx apache-tvm tensorflow-addons tf2onnx"
+}
