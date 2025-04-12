@@ -16,11 +16,12 @@
           "twxs.cmake",
           "ms-python.python",
           "ms-azuretools.vscode-docker",
-          "eamodio.toggle-excluded-files"
+          "eamodio.toggle-excluded-files",
+          "conan-extension"
         ]
       }
     },
-    "postCreateCommand": "bash ./install-tools.sh",
+    "postCreateCommand": "chmod +x install-tools.sh && ./install-tools.sh",
     "containerEnv": {
       "PYTHONPATH": "/workspace"
     },

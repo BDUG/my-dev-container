@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-echo "Installing additional C/C++ tools..."
+echo "C/C++ tools..."
+
 
 # Valgrind
 sudo apt update && sudo apt install -y valgrind
@@ -12,4 +13,10 @@ sudo mv bazel-archive-keyring.gpg /usr/share/keyrings/
 echo "deb [signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
 sudo apt update && sudo apt install -y bazel
 
-echo "Tools installiert."
+# Conan
+sudo apt install -y pip
+sudo apt install -y pipx
+pipx ensurepath
+pipx install conan
+
+echo "Tools installed."
